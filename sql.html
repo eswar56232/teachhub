@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SQL - TeachHub</title>
+  <style>
+    :root {
+      --primary: #00b894;
+      --dark: #2d3436;
+      --light: #f4f4f4;
+      --white: #fff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    .container {
+      padding: 3rem 2rem;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    .course-details {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .course-details ul {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+    .course-details ul li {
+      margin-bottom: 0.5rem;
+    }
+    .course-details button {
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .course-details button:hover {
+      background-color: #019474;
+    }
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SQL - TeachHub</h1>
+  </header>
+
+  <nav>
+       <a href="index.html">Home</a>
+    <a href="index.html#courses">Courses</a>
+  </nav>
+
+  <div class="container">
+    <div class="course-details">
+      <h2>SQL</h2>
+      <p>In this course, you will learn the following topics:</p>
+      <ul>
+        
+           <li>Introduction to SQL</li>
+        <li>Database Basics and Terminologies</li>
+        <li>Data Types and Constraints</li>
+        <li>Creating and Managing Tables</li>
+        <li>Basic SQL Queries (SELECT, WHERE, ORDER BY)</li>
+        <li>Filtering, Sorting, and Aliasing</li>
+        <li>SQL Functions (String, Numeric, Date)</li>
+        <li>Aggregate Functions and GROUP BY</li>
+        <li>Joins (INNER, LEFT, RIGHT, FULL OUTER)</li>
+        <li>Subqueries and Nested Queries</li>
+        <li>Set Operations (UNION, INTERSECT, EXCEPT)</li>
+        <li>Data Manipulation (INSERT, UPDATE, DELETE)</li>
+        <li>Data Definition Language (CREATE, ALTER, DROP)</li>
+        <li>Views and Indexes</li>
+        <li>Transactions and ACID Properties</li>
+        <li>Stored Procedures and Functions</li>
+        <li>Triggers and Events</li>
+        <li>User Management and Permissions</li>
+        <li>Performance Tuning and Optimization</li>
+        <li>Working with SQL in Real Projects</li>
+      </ul>
+      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
+      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20SQL5%20course" style="display:inline-block; margin-top:1rem;">
+  <button>Enroll Now</button>
+</a>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
+  </footer>
+</body>
+</html>
