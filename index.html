@@ -225,27 +225,29 @@
   border-top: 2px solid #f39c12;
   border-bottom: 2px solid #f39c12;
   position: relative;
+  white-space: nowrap;
 }
 
 .scrolling-text {
-  display: flex;
-  width: max-content;
+  display: inline-flex;
   animation: scroll-left 20s linear infinite;
 }
 
 .scrolling-text span {
   padding: 0 2rem;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
+
 
 
   </style>
@@ -278,8 +280,11 @@
   <div class="scrolling-text">
     <span>🔥 Special Offer: Learn Linux Administration for just ₹5000/- 🔥</span>
     <span>🔥 Special Offer: Learn Linux Administration for just ₹5000/- 🔥</span>
+    <span>🔥 Special Offer: Learn Linux Administration for just ₹5000/- 🔥</span>
+    <span>🔥 Special Offer: Learn Linux Administration for just ₹5000/- 🔥</span>
   </div>
 </div>
+
 
 
 
