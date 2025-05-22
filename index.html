@@ -52,15 +52,90 @@
       color: var(--primary);
     }
     .hero {
-      background-color: var(--white);
-      text-align: center;
-      padding: 4rem 2rem;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #fefefe;
+}
+.hero {
+  background-color: var(--white);
+  text-align: center;
+  padding: 4rem 2rem 1.5rem 2rem; /* Top Right Bottom Left */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.hero .text {
+  max-width: 500px;
+  color: #2d3436;
+}
+
+.hero .text h1 {
+  font-size: 2.5rem;
+}
+
+.hero .text span {
+  color: #0984e3;
+}
+
+.hero .text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.hero .text a {
+  display: inline-block;
+  background-color: #e17055;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Image style */
+.hero .image img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+  }
+  .hero .text, .hero .image {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+  .hero .text {
+    font-size: 0.85rem; /* smaller font size */
+    line-height: 1.2;
+  }
+  .hero .text h1 {
+    font-size: 1.5rem; /* smaller heading */
+  }
+  .hero .text p {
+    font-size: 0.9rem; /* smaller paragraph */
+  }
+  .hero .text a {
+    font-size: 0.9rem; /* smaller button text */
+    padding: 0.5rem 1rem;
+  }
+  .hero .image img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+}
     .cta-btn {
       background-color: var(--primary);
       color: white;
@@ -201,24 +276,22 @@
 
 
 
-  <section class="hero" id="home">
-    <h2>Welcome to TeachHub</h2>
+ <section class="hero">
+  <div class="text">
+    <h1>Welcome to <span>TeachHub</span></h1>
     <p>Learn job-ready skills from top instructors in Kurnool</p>
-    <a href="#courses" class="cta-btn">View Courses</a>
-  </section>
+    <a href="#courses">View Courses</a>
+  </div>
+  <div class="image">
+    <img src="hero.png" alt="Student Learning Online" />
+  </div>
+</section>
 
-  <section class="container benefits">
-    <h3 style="text-align: center; margin-bottom: 1rem;">Why Choose Us?</h3>
-    <ul>
-      <li>✔️ Learn from industry experts</li>
-      <li>✔️ job-ready</li>
-      <li>✔️ Flexible timings – online</li>
-      <li>✔️ Resume creation support</li>
-      <li>✔️ Mock interviews</li>
-      <li>✔️ Full course documentation</li>
-    </ul>
-  </section>
 
+  <section style="padding: 1.5rem 2rem; background-color: #f9f9f9; text-align: center;">
+
+    <img src="whychoose.png" alt="Why Choose TeachHub" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.1);" />
+  </section>
 <section class="container" style="text-align: center;">
   <h3 style="margin-bottom: 1rem;">What Makes TeachHub Special?</h3>
   <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
