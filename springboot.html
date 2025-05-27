@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Spring Boot Training in Kurnool – Backend Developer Course | TeachHub</title>
-<meta name="description" content="Learn Spring Boot in Kurnool with TeachHub. Master REST APIs, microservices, and backend Java development with expert guidance.">
-<meta name="keywords" content="Spring Boot course Kurnool, REST API course, Java backend training, Spring Boot online course, TeachHub">
-
-  <title>spring boot - TeachHub</title>
+  <title>Spring Boot - TeachHub</title>
   <style>
     :root {
       --primary: #00b894;
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,16 +86,71 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -115,42 +158,114 @@
   </header>
 
   <nav>
-       <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Spring Boot</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-        <li>Introduction to Spring Boot</li>
-        <li>Spring Boot Project Structure</li>
-        <li>Spring Boot Core Concepts</li>
-        <li>RESTful Web Services with Spring Boot</li>
-        <li>Spring Boot with Data Access (Spring Data JPA)</li>
-        <li>Spring Boot with Databases</li>
-        <li>Spring Boot Validation</li>
-        <li>Spring Boot Security (Basics)</li>
-        <li>Spring Boot Testing</li>
-        <li>Spring Boot DevTools and Actuator</li>
-        <li>Advanced Spring Boot</li>
-        <li>Spring Boot with Front-End</li>
-        <li>Spring Boot with Microservices (Intro)</li>
-        <li>Spring Boot Deployment</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Spring Boot</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+<div class="topics-grid">
+  <div class="topic-card">
+    Introduction to Spring Boot
+    <div class="description">Understand what Spring Boot is, its advantages, and how it simplifies Spring development.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot Project Structure
+    <div class="description">Explore the typical directory layout and key files in a Spring Boot project.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot Core Concepts
+    <div class="description">Learn about auto-configuration, starters, application properties, and dependency injection.</div>
+  </div>
+  <div class="topic-card">
+    RESTful Web Services with Spring Boot
+    <div class="description">Create APIs using Spring MVC annotations and handle HTTP requests/responses.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot with Data Access (Spring Data JPA)
+    <div class="description">Use Spring Data JPA to interact with relational databases using repositories.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot with Databases
+    <div class="description">Connect your application to databases like MySQL, PostgreSQL, or H2.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot Validation
+    <div class="description">Implement form and API input validation using annotations like @Valid and @NotNull.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot Security (Basics)
+    <div class="description">Add basic authentication and authorization to your app using Spring Security.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot Testing
+    <div class="description">Write unit and integration tests using tools like JUnit, Mockito, and @SpringBootTest.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot DevTools and Actuator
+    <div class="description">Enable live reload with DevTools and monitor your app with Spring Boot Actuator.</div>
+  </div>
+  <div class="topic-card">
+    Advanced Spring Boot
+    <div class="description">Explore advanced topics like custom starters, profiles, and configuration properties.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot with Front-End
+    <div class="description">Integrate your Spring Boot backend with frontend technologies like React, Angular, or Thymeleaf.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot with Microservices (Intro)
+    <div class="description">Learn how Spring Boot supports microservice architecture using REST and service discovery.</div>
+  </div>
+  <div class="topic-card">
+    Spring Boot Deployment
+    <div class="description">Package and deploy Spring Boot applications to servers or cloud platforms.</div>
+  </div>
+</div>
+
+
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20springboot%20course" style="display:inline-block; margin-top:1rem;">
+
+      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
