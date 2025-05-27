@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Node.js Course in Kurnool – Full Stack Developer Training | TeachHub</title>
-<meta name="description" content="Learn Node.js and Express in Kurnool. Build backend systems and APIs with TeachHub's expert-led online training.">
-<meta name="keywords" content="Node.js course Kurnool, Express.js training, backend development, TeachHub Node course">
-
   <title>Node.js - TeachHub</title>
   <style>
     :root {
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,16 +86,71 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -115,48 +158,137 @@
   </header>
 
   <nav>
-         <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Node.js</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-        <li>Introduction to Node.js</li>
-        <li>Environment Setup and Node.js Architecture</li>
-        <li>Working with npm and package.json</li>
-        <li>Core Modules in Node.js (fs, path, http, etc.)</li>
-        <li>Asynchronous Programming (Callbacks, Promises, Async/Await)</li>
-        <li>Working with File System and Streams</li>
-        <li>Creating a Web Server with HTTP Module</li>
-        <li>Express.js Framework Basics</li>
-        <li>Routing and Middleware in Express.js</li>
-        <li>Handling Forms, Query Params, and JSON Data</li>
-        <li>Connecting Node.js with Databases (MongoDB, MySQL)</li>
-        <li>RESTful API Development with Express</li>
-        <li>Authentication and Authorization (JWT, Sessions)</li>
-        <li>Error Handling and Logging</li>
-        <li>Templating Engines (EJS, Pug, Handlebars)</li>
-        <li>Working with WebSockets (Real-Time Communication)</li>
-        <li>Node.js with File Uploads and Downloads</li>
-        <li>Testing Node.js Applications (Mocha, Chai, Jest)</li>
-        <li>Node.js Deployment (Heroku, Vercel, Docker, etc.)</li>
-        <li>Building a Full-Stack Project with Node.js and a Frontend Framework</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Node.js</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+      <div class="topics-grid">
+  <div class="topic-card">
+    Introduction to Node.js
+    <div class="description">Learn what Node.js is and why it is popular for server-side development.</div>
+  </div>
+  <div class="topic-card">
+    Environment Setup and Node.js Architecture
+    <div class="description">Set up Node.js environment and understand its event-driven architecture.</div>
+  </div>
+  <div class="topic-card">
+    Working with npm and package.json
+    <div class="description">Manage project dependencies and scripts using npm and package.json files.</div>
+  </div>
+  <div class="topic-card">
+    Core Modules in Node.js (fs, path, http, etc.)
+    <div class="description">Explore essential built-in modules like file system, path handling, and HTTP.</div>
+  </div>
+  <div class="topic-card">
+    Asynchronous Programming (Callbacks, Promises, Async/Await)
+    <div class="description">Handle asynchronous operations using callbacks, promises, and async/await syntax.</div>
+  </div>
+  <div class="topic-card">
+    Working with File System and Streams
+    <div class="description">Read, write, and manipulate files efficiently using streams and file system APIs.</div>
+  </div>
+  <div class="topic-card">
+    Creating a Web Server with HTTP Module
+    <div class="description">Build a simple web server using Node.js HTTP module from scratch.</div>
+  </div>
+  <div class="topic-card">
+    Express.js Framework Basics
+    <div class="description">Introduction to Express.js, a minimalist web framework for Node.js applications.</div>
+  </div>
+  <div class="topic-card">
+    Routing and Middleware in Express.js
+    <div class="description">Learn how to handle routes and middleware for request processing in Express apps.</div>
+  </div>
+  <div class="topic-card">
+    Handling Forms, Query Params, and JSON Data
+    <div class="description">Process form submissions, URL query parameters, and JSON payloads in requests.</div>
+  </div>
+  <div class="topic-card">
+    Connecting Node.js with Databases (MongoDB, MySQL)
+    <div class="description">Integrate MongoDB and MySQL databases with Node.js applications.</div>
+  </div>
+  <div class="topic-card">
+    RESTful API Development with Express
+    <div class="description">Create REST APIs using Express for CRUD operations and more.</div>
+  </div>
+  <div class="topic-card">
+    Authentication and Authorization (JWT, Sessions)
+    <div class="description">Implement secure authentication and authorization with JWT and sessions.</div>
+  </div>
+  <div class="topic-card">
+    Error Handling and Logging
+    <div class="description">Manage application errors and log important events for debugging and audit.</div>
+  </div>
+  <div class="topic-card">
+    Templating Engines (EJS, Pug, Handlebars)
+    <div class="description">Use templating engines to render dynamic HTML pages on the server side.</div>
+  </div>
+  <div class="topic-card">
+    Working with WebSockets (Real-Time Communication)
+    <div class="description">Enable real-time, bidirectional communication using WebSockets in Node.js.</div>
+  </div>
+  <div class="topic-card">
+    Node.js with File Uploads and Downloads
+    <div class="description">Handle file uploads and downloads in web applications using Node.js.</div>
+  </div>
+  <div class="topic-card">
+    Testing Node.js Applications (Mocha, Chai, Jest)
+    <div class="description">Write and run tests to ensure code quality with popular Node.js testing frameworks.</div>
+  </div>
+  <div class="topic-card">
+    Node.js Deployment (Heroku, Vercel, Docker, etc.)
+    <div class="description">Deploy Node.js apps to the cloud and containers using platforms like Heroku and Docker.</div>
+  </div>
+  <div class="topic-card">
+    Building a Full-Stack Project with Node.js and a Frontend Framework
+    <div class="description">Combine Node.js backend with a frontend framework to build a complete application.</div>
+  </div>
+</div>
+
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20nodejs%20course" style="display:inline-block; margin-top:1rem;">
+
+<a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
