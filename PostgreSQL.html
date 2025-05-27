@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PostgreSQL Course Online – Learn Advanced SQL in Kurnool | TeachHub</title>
-<meta name="description" content="Master PostgreSQL and advanced SQL with TeachHub's online course. Ideal for aspiring DBAs and developers in Kurnool.">
-<meta name="keywords" content="PostgreSQL training Kurnool, advanced SQL course, database developer, online PostgreSQL, TeachHub">
-
   <title>PostgreSQL - TeachHub</title>
   <style>
     :root {
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,16 +86,71 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -121,42 +164,131 @@
 
   <div class="container">
     <div class="course-details">
-      <h2>PostgreSQL</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-        <li>Introduction to PostgreSQL</li>
-        <li>Installing and Setting Up PostgreSQL</li>
-        <li>PostgreSQL Architecture and Tools (psql, pgAdmin)</li>
-        <li>Data Types and Constraints in PostgreSQL</li>
-        <li>Creating and Managing Databases and Tables</li>
-        <li>Basic SQL Queries in PostgreSQL</li>
-        <li>Functions and Operators (Text, Math, Date, etc.)</li>
-        <li>Joins, Subqueries, and Set Operations</li>
-        <li>Data Manipulation (INSERT, UPDATE, DELETE)</li>
-        <li>Indexes and Performance Optimization</li>
-        <li>Views and Materialized Views</li>
-        <li>Transactions and Concurrency (ACID, MVCC)</li>
-        <li>Stored Procedures and Functions (PL/pgSQL)</li>
-        <li>Triggers and Event Handling</li>
-        <li>User Roles and Permissions (Security)</li>
-        <li>Backup, Restore, and Maintenance</li>
-        <li>Advanced Data Types (JSON, Arrays, HSTORE)</li>
-        <li>Partitioning and Table Inheritance</li>
-        <li>Extensions and Full-Text Search</li>
-        <li>PostgreSQL in Real-World Applications (Web, APIs, Analytics)</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>PostgreSQL</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+<div class="topics-grid">
+  <div class="topic-card">
+    Introduction to PostgreSQL
+    <div class="description">Overview of PostgreSQL, its history, and key features as a powerful open-source database.</div>
+  </div>
+  <div class="topic-card">
+    Installing and Setting Up PostgreSQL
+    <div class="description">Steps to install PostgreSQL and configure it for first-time use.</div>
+  </div>
+  <div class="topic-card">
+    PostgreSQL Architecture and Tools (psql, pgAdmin)
+    <div class="description">Understand PostgreSQL internals and learn to use tools like psql and pgAdmin.</div>
+  </div>
+  <div class="topic-card">
+    Data Types and Constraints in PostgreSQL
+    <div class="description">Explore various data types and how to enforce data integrity with constraints.</div>
+  </div>
+  <div class="topic-card">
+    Creating and Managing Databases and Tables
+    <div class="description">Learn to create databases and tables and manage their structure efficiently.</div>
+  </div>
+  <div class="topic-card">
+    Basic SQL Queries in PostgreSQL
+    <div class="description">Write simple SELECT queries to retrieve data from PostgreSQL databases.</div>
+  </div>
+  <div class="topic-card">
+    Functions and Operators (Text, Math, Date, etc.)
+    <div class="description">Use built-in functions and operators for text, math, date, and other operations.</div>
+  </div>
+  <div class="topic-card">
+    Joins, Subqueries, and Set Operations
+    <div class="description">Combine and filter data using joins, subqueries, and set operations.</div>
+  </div>
+  <div class="topic-card">
+    Data Manipulation (INSERT, UPDATE, DELETE)
+    <div class="description">Modify database records using INSERT, UPDATE, and DELETE commands.</div>
+  </div>
+  <div class="topic-card">
+    Indexes and Performance Optimization
+    <div class="description">Improve query performance using indexes and query optimization techniques.</div>
+  </div>
+  <div class="topic-card">
+    Views and Materialized Views
+    <div class="description">Create virtual tables with views and optimize queries with materialized views.</div>
+  </div>
+  <div class="topic-card">
+    Transactions and Concurrency (ACID, MVCC)
+    <div class="description">Manage data integrity with transactions and concurrency control methods.</div>
+  </div>
+  <div class="topic-card">
+    Stored Procedures and Functions (PL/pgSQL)
+    <div class="description">Write reusable server-side logic using PostgreSQL’s procedural language.</div>
+  </div>
+  <div class="topic-card">
+    Triggers and Event Handling
+    <div class="description">Automatically execute functions in response to database events with triggers.</div>
+  </div>
+  <div class="topic-card">
+    User Roles and Permissions (Security)
+    <div class="description">Control access and secure your database with user roles and permissions.</div>
+  </div>
+  <div class="topic-card">
+    Backup, Restore, and Maintenance
+    <div class="description">Perform backup and restore operations and maintain database health.</div>
+  </div>
+  <div class="topic-card">
+    Advanced Data Types (JSON, Arrays, HSTORE)
+    <div class="description">Utilize PostgreSQL’s advanced data types for flexible and complex data storage.</div>
+  </div>
+  <div class="topic-card">
+    Partitioning and Table Inheritance
+    <div class="description">Organize large datasets using table partitioning and inheritance features.</div>
+  </div>
+  <div class="topic-card">
+    Extensions and Full-Text Search
+    <div class="description">Enhance PostgreSQL with extensions and implement full-text search capabilities.</div>
+  </div>
+  <div class="topic-card">
+    PostgreSQL in Real-World Applications (Web, APIs, Analytics)
+    <div class="description">Explore practical use cases of PostgreSQL in web development, APIs, and data analytics.</div>
+  </div>
+</div>
+
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20postgresql%20course" style="display:inline-block; margin-top:1rem;">
+
+      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
