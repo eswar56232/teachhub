@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Automation Testing with Selenium (Java) – Online Course | TeachHub</title>
-<meta name="description" content="Learn automation testing using Selenium with Java. Prepare for QA roles with hands-on Selenium training from Kurnool.">
-<meta name="keywords" content="Selenium course Kurnool, automation testing training, Java with Selenium, TeachHub automation course">
-
-  <title>Automation Testing - TeachHub</title>
+  <title>Automation Testing-Selenium(Java) - TeachHub</title>
   <style>
     :root {
       --primary: #00b894;
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,65 +86,148 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Automation Testing - TeachHub</h1>
+    <h1>Automation Testing-Selenium(Java) - TeachHub</h1>
   </header>
 
   <nav>
-      <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Automation Testing</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-                <li>Introduction to Automation Testing</li>
-        <li>Introduction to Selenium and Java</li>
-        <li>Java Basics for Selenium</li>
-        <li>Selenium WebDriver Basics</li>
-        <li>Browser Navigation and Interactions</li>
-        <li>Synchronization in Selenium</li>
-        <li>Handling Web Elements</li>
-        <li>Advanced Selenium Commands</li>
-        <li>TestNG Framework for Test Management</li>
-        <li>Data-Driven Testing in Selenium</li>
-        <li>Page Object Model (POM)</li>
-        <li>Handling File Uploads and Downloads</li>
-        <li>Selenium Grid and Parallel Execution</li>
-        <li>Integration with Continuous Integration (CI) Tools</li>
-        <li>Advanced Selenium Features</li>
-        <li>Reporting and Logging</li>
-        <li>Cross-Browser Testing with Selenium</li>
-        <li>Mobile Automation Testing with Appium (Optional Advanced Topic)</li>
-        <li>Best Practices in Selenium Automation</li>
-        <li>Final Project</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Automation Testing-Selenium(Java)</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+       <div class="topics-grid">
+        <div class="topic-card">Introduction to Automation Testing<div class="description">Learn what automation testing is, its benefits, and tools commonly used.</div></div>
+        <div class="topic-card">Introduction to Selenium and Java<div class="description">Overview of Selenium tools and how Java integrates with Selenium for scripting.</div></div>
+        <div class="topic-card">Java Basics for Selenium<div class="description">Covers variables, loops, conditionals, and object-oriented concepts used in test automation.</div></div>
+        <div class="topic-card">Selenium WebDriver Basics<div class="description">Learn how to use WebDriver to control browser actions.</div></div>
+        <div class="topic-card">Browser Navigation and Interactions<div class="description">Perform actions like open URL, click, type, and navigate between pages.</div></div>
+        <div class="topic-card">Synchronization in Selenium<div class="description">Handle dynamic elements using implicit, explicit, and fluent waits.</div></div>
+        <div class="topic-card">Handling Web Elements<div class="description">Interact with checkboxes, dropdowns, alerts, and popups.</div></div>
+        <div class="topic-card">Advanced Selenium Commands<div class="description">Work with JavaScriptExecutor, capturing screenshots, window handles.</div></div>
+        <div class="topic-card">TestNG Framework for Test Management<div class="description">Organize tests using annotations, groups, dependencies, and suites.</div></div>
+        <div class="topic-card">Data-Driven Testing in Selenium<div class="description">Use Excel or CSV files to feed multiple data sets into tests.</div></div>
+        <div class="topic-card">Page Object Model (POM)<div class="description">Design pattern that enhances test maintenance and readability.</div></div>
+        <div class="topic-card">Handling File Uploads and Downloads<div class="description">Use Selenium and Robot class to automate file input/output.</div></div>
+        <div class="topic-card">Selenium Grid and Parallel Execution<div class="description">Run tests across multiple machines and browsers in parallel.</div></div>
+        <div class="topic-card">Integration with CI Tools<div class="description">Connect your tests with Jenkins or other CI tools for automated builds.</div></div>
+        <div class="topic-card">Advanced Selenium Features<div class="description">Handle dynamic tables, custom waits, and page factory pattern.</div></div>
+        <div class="topic-card">Reporting and Logging<div class="description">Generate test reports using ExtentReports and log with Log4j.</div></div>
+        <div class="topic-card">Cross-Browser Testing<div class="description">Test applications in Chrome, Firefox, Edge, and Safari.</div></div>
+        <div class="topic-card">Mobile Automation with Appium<div class="description">Basics of Appium and running tests on Android/iOS apps.</div></div>
+        <div class="topic-card">Best Practices in Selenium Automation<div class="description">Code reuse, modularization, naming conventions, and version control.</div></div>
+        <div class="topic-card">Final Project<div class="description">Build an end-to-end automation framework and apply everything you've learned.</div></div>
+      </div>
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Automationtesting%20course" style="display:inline-block; margin-top:1rem;">
+
+       <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+   const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+
+  </script>
 </body>
 </html>
