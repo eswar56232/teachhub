@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SQL Training in Kurnool – Learn Database Skills Online | TeachHub</title>
-<meta name="description" content="Start your SQL journey with TeachHub. Learn queries, joins, subqueries, and more in our online course from Kurnool.">
-<meta name="keywords" content="SQL course Kurnool, online SQL training, learn database, TeachHub SQL course, relational databases">
-
   <title>SQL - TeachHub</title>
   <style>
     :root {
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,16 +86,71 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -115,48 +158,137 @@
   </header>
 
   <nav>
-       <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>SQL</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-           <li>Introduction to SQL</li>
-        <li>Database Basics and Terminologies</li>
-        <li>Data Types and Constraints</li>
-        <li>Creating and Managing Tables</li>
-        <li>Basic SQL Queries (SELECT, WHERE, ORDER BY)</li>
-        <li>Filtering, Sorting, and Aliasing</li>
-        <li>SQL Functions (String, Numeric, Date)</li>
-        <li>Aggregate Functions and GROUP BY</li>
-        <li>Joins (INNER, LEFT, RIGHT, FULL OUTER)</li>
-        <li>Subqueries and Nested Queries</li>
-        <li>Set Operations (UNION, INTERSECT, EXCEPT)</li>
-        <li>Data Manipulation (INSERT, UPDATE, DELETE)</li>
-        <li>Data Definition Language (CREATE, ALTER, DROP)</li>
-        <li>Views and Indexes</li>
-        <li>Transactions and ACID Properties</li>
-        <li>Stored Procedures and Functions</li>
-        <li>Triggers and Events</li>
-        <li>User Management and Permissions</li>
-        <li>Performance Tuning and Optimization</li>
-        <li>Working with SQL in Real Projects</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>SQL</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+  <div class="topics-grid">
+  <div class="topic-card">
+    Introduction to SQL
+    <div class="description">Understand what SQL is, why it's used, and the types of databases it interacts with.</div>
+  </div>
+  <div class="topic-card">
+    Database Basics and Terminologies
+    <div class="description">Learn foundational terms like tables, rows, columns, schemas, and relational models.</div>
+  </div>
+  <div class="topic-card">
+    Data Types and Constraints
+    <div class="description">Explore SQL data types and constraints like PRIMARY KEY, NOT NULL, UNIQUE, and FOREIGN KEY.</div>
+  </div>
+  <div class="topic-card">
+    Creating and Managing Tables
+    <div class="description">Write SQL statements to create, alter, and delete database tables.</div>
+  </div>
+  <div class="topic-card">
+    Basic SQL Queries (SELECT, WHERE, ORDER BY)
+    <div class="description">Retrieve data using SELECT queries with filtering and sorting capabilities.</div>
+  </div>
+  <div class="topic-card">
+    Filtering, Sorting, and Aliasing
+    <div class="description">Use WHERE, ORDER BY, and column aliases to manipulate and present data.</div>
+  </div>
+  <div class="topic-card">
+    SQL Functions (String, Numeric, Date)
+    <div class="description">Apply built-in functions to manipulate strings, numbers, and dates.</div>
+  </div>
+  <div class="topic-card">
+    Aggregate Functions and GROUP BY
+    <div class="description">Summarize data using COUNT, SUM, AVG, and organize it with GROUP BY.</div>
+  </div>
+  <div class="topic-card">
+    Joins (INNER, LEFT, RIGHT, FULL OUTER)
+    <div class="description">Combine data from multiple tables using different types of joins.</div>
+  </div>
+  <div class="topic-card">
+    Subqueries and Nested Queries
+    <div class="description">Embed queries within queries for more advanced data retrieval and filtering.</div>
+  </div>
+  <div class="topic-card">
+    Set Operations (UNION, INTERSECT, EXCEPT)
+    <div class="description">Merge or compare result sets using SQL set operators.</div>
+  </div>
+  <div class="topic-card">
+    Data Manipulation (INSERT, UPDATE, DELETE)
+    <div class="description">Add, modify, or remove data within your database tables.</div>
+  </div>
+  <div class="topic-card">
+    Data Definition Language (CREATE, ALTER, DROP)
+    <div class="description">Manage schema structures with DDL commands for tables, indexes, and more.</div>
+  </div>
+  <div class="topic-card">
+    Views and Indexes
+    <div class="description">Create virtual tables and improve performance with views and indexes.</div>
+  </div>
+  <div class="topic-card">
+    Transactions and ACID Properties
+    <div class="description">Maintain database integrity using transactions and understand ACID principles.</div>
+  </div>
+  <div class="topic-card">
+    Stored Procedures and Functions
+    <div class="description">Encapsulate SQL logic inside reusable stored procedures and functions.</div>
+  </div>
+  <div class="topic-card">
+    Triggers and Events
+    <div class="description">Automatically respond to data changes with triggers and scheduled events.</div>
+  </div>
+  <div class="topic-card">
+    User Management and Permissions
+    <div class="description">Control database access and manage user roles and privileges.</div>
+  </div>
+  <div class="topic-card">
+    Performance Tuning and Optimization
+    <div class="description">Analyze and improve SQL queries and database performance.</div>
+  </div>
+  <div class="topic-card">
+    Working with SQL in Real Projects
+    <div class="description">Apply SQL knowledge to build and query real-world database solutions.</div>
+  </div>
+</div>
+
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20SQL5%20course" style="display:inline-block; margin-top:1rem;">
+
+      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
