@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Learn Java Programming in Kurnool – Online Course | TeachHub</title>
-<meta name="description" content="Join the best Java Programming course in Kurnool. Learn core and advanced Java with real-time projects, online support, and career guidance.">
-<meta name="keywords" content="Java course in Kurnool, Java online training, core Java, advanced Java, backend development, TeachHub">
-
   <title>Java Programming - TeachHub</title>
   <style>
     :root {
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,16 +86,71 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -115,52 +158,81 @@
   </header>
 
   <nav>
-      <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Java Programming</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        <li>Introduction to Java</li>
-        <li>Setup Java Environment</li>
-        <li>Operator and Expressions</li>
-        <li>String Class and Printing</li>
-        <li>Conditional Statements</li>
-        <li>Loops</li>
-        <li>Arrays</li>
-        <li>Methods</li>
-        <li>Object-Oriented Programming</li>
-        <li>Inheritance</li>
-        <li>Abstract Classes</li>
-        <li>Interfaces</li>
-        <li>Inner Classes</li>
-        <li>Static and Final</li>
-        <li>Packages</li>
-        <li>Exception Handling</li>
-        <li>Multithreading</li>
-        <li>java.lang Package</li>
-        <li>Annotations and Javadoc</li>
-        <li>Lambda Expressions</li>
-        <li>Java IO</li>
-        <li>Collection Framework</li>
-        <li>Network Programming</li>
-        <li>AWT</li>
-        <li>Swing</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Java Programming</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+      <div class="topics-grid">
+        <div class="topic-card">Introduction to Java<div class="description">History of Java, features like platform independence, and why it’s widely used.</div></div>
+        <div class="topic-card">Setup Java Environment<div class="description">How to install JDK, configure the environment, and write a Hello World program.</div></div>
+        <div class="topic-card">Operator and Expressions<div class="description">Covers arithmetic, relational, logical, and assignment operators in Java.</div></div>
+        <div class="topic-card">String Class and Printing<div class="description">Using `System.out.println`, string concatenation, and string methods.</div></div>
+        <div class="topic-card">Conditional Statements<div class="description">Use of `if`, `else if`, `else`, and `switch-case` statements in decision making.</div></div>
+        <div class="topic-card">Loops<div class="description">Covers `for`, `while`, and `do-while` loops with syntax and examples.</div></div>
+        <div class="topic-card">Arrays<div class="description">Introduction to arrays, how to declare, initialize, and loop through them.</div></div>
+        <div class="topic-card">Methods<div class="description">Defining, calling, and using parameters and return types in Java methods.</div></div>
+        <div class="topic-card">Object-Oriented Programming<div class="description">Concepts like class, object, encapsulation, inheritance, and polymorphism.</div></div>
+        <div class="topic-card">Inheritance<div class="description">Use of `extends`, superclasses and subclasses, and method overriding.</div></div>
+        <div class="topic-card">Abstract Classes<div class="description">Defining abstract classes and methods and how they are extended.</div></div>
+        <div class="topic-card">Interfaces<div class="description">How to declare and implement interfaces using `implements` keyword.</div></div>
+        <div class="topic-card">Inner Classes<div class="description">Nested, static, and anonymous inner classes with use cases.</div></div>
+        <div class="topic-card">Static and Final<div class="description">Usage of `static` for class-level variables and `final` for constants and classes.</div></div>
+        <div class="topic-card">Packages<div class="description">Grouping related classes and importing packages using `import` keyword.</div></div>
+        <div class="topic-card">Exception Handling<div class="description">Using `try`, `catch`, `finally`, `throw`, and `throws` for error control.</div></div>
+        <div class="topic-card">Multithreading<div class="description">Creating threads using `Thread` class and `Runnable` interface.</div></div>
+        <div class="topic-card">java.lang Package<div class="description">Commonly used classes like `String`, `Math`, `Object`, and `System`.</div></div>
+        <div class="topic-card">Annotations and Javadoc<div class="description">Using `@Override`, `@Deprecated` and documenting code with `javadoc`.</div></div>
+        <div class="topic-card">Lambda Expressions<div class="description">Simplify function expressions and use them with collections and interfaces.</div></div>
+        <div class="topic-card">Java IO<div class="description">Reading/writing files using InputStream, OutputStream, Reader, and Writer.</div></div>
+        <div class="topic-card">Collection Framework<div class="description">Using `List`, `Set`, `Map` and interfaces like `Collection` and `Iterator`.</div></div>
+        <div class="topic-card">Network Programming<div class="description">Using `Socket` and `ServerSocket` classes for building network apps.</div></div>
+        <div class="topic-card">AWT<div class="description">Basics of GUI development using Abstract Window Toolkit.</div></div>
+        <div class="topic-card">Swing<div class="description">Building GUI apps using `JFrame`, `JButton`, `JLabel`, etc.</div></div>
+      </div>
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20java%20course" style="display:inline-block; margin-top:1rem;">
+
+       <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+   const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+
+  </script>
 </body>
 </html>
