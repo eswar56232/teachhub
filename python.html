@@ -3,10 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Python Course in Kurnool – Online Training | TeachHub</title>
-<meta name="description" content="Master Python programming in Kurnool. Learn automation, data science, and web development with live online training.">
-<meta name="keywords" content="Python course Kurnool, Python online classes, data science with Python, TeachHub Python course">
-
   <title>Python Programming - TeachHub</title>
   <style>
     :root {
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,65 +86,209 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Python Programming - TeachHub</h1>
+    <h1>Python - TeachHub</h1>
   </header>
 
   <nav>
-       <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Python Programming</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-        <li>Introduction to Python</li>
-        <li>Setting up Python Environment</li>
-        <li>Data Types and Variables</li>
-        <li>Operators and Expressions</li>
-        <li>Conditional Statements</li>
-        <li>Loops</li>
-        <li>Functions</li>
-        <li>Object-Oriented Programming</li>
-        <li>Modules and Packages</li>
-        <li>Exception Handling</li>
-        <li>File Handling</li>
-        <li>Working with Libraries (e.g., NumPy, Pandas)</li>
-        <li>Data Structures (Lists, Tuples, Dictionaries, Sets)</li>
-        <li>Regular Expressions</li>
-        <li>Python for Web Development (Flask)</li>
-        <li>Python for Data Science</li>
-        <li>Testing and Debugging</li>
-        <li>Python Advanced Topics (Generators, Decorators)</li>
-        <li>Working with APIs</li>
-        <li>Creating and Deploying Python Projects</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Python</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+     <div class="topics-grid">
+  <div class="topic-card">
+    Introduction to Python
+    <div class="description">Get to know Python, its history, and why it’s a popular programming language.</div>
+  </div>
+  <div class="topic-card">
+    Setting up Python Environment
+    <div class="description">Install Python and set up your development environment for coding.</div>
+  </div>
+  <div class="topic-card">
+    Data Types and Variables
+    <div class="description">Understand Python’s data types and how to work with variables.</div>
+  </div>
+  <div class="topic-card">
+    Operators and Expressions
+    <div class="description">Learn how to use arithmetic, logical, and comparison operators in Python.</div>
+  </div>
+  <div class="topic-card">
+    Conditional Statements
+    <div class="description">Control the flow of your program using if, elif, and else statements.</div>
+  </div>
+  <div class="topic-card">
+    Loops
+    <div class="description">Repeat code execution with for and while loops.</div>
+  </div>
+  <div class="topic-card">
+    Functions
+    <div class="description">Create reusable blocks of code with functions.</div>
+  </div>
+  <div class="topic-card">
+    Object-Oriented Programming
+    <div class="description">Learn OOP concepts like classes, objects, inheritance, and polymorphism.</div>
+  </div>
+  <div class="topic-card">
+    Modules and Packages
+    <div class="description">Organize and reuse code with modules and packages.</div>
+  </div>
+  <div class="topic-card">
+    Exception Handling
+    <div class="description">Manage errors gracefully using try, except, and finally blocks.</div>
+  </div>
+  <div class="topic-card">
+    File Handling
+    <div class="description">Read from and write to files in various formats.</div>
+  </div>
+  <div class="topic-card">
+    Working with Libraries (e.g., NumPy, Pandas)
+    <div class="description">Use popular libraries for scientific computing and data manipulation.</div>
+  </div>
+  <div class="topic-card">
+    Data Structures (Lists, Tuples, Dictionaries, Sets)
+    <div class="description">Work with Python’s built-in data structures to store and manage data.</div>
+  </div>
+  <div class="topic-card">
+    Regular Expressions
+    <div class="description">Search and manipulate text using regex patterns.</div>
+  </div>
+  <div class="topic-card">
+    Python for Web Development (Flask)
+    <div class="description">Build simple web applications using the Flask framework.</div>
+  </div>
+  <div class="topic-card">
+    Python for Data Science
+    <div class="description">Explore data analysis, visualization, and machine learning with Python.</div>
+  </div>
+  <div class="topic-card">
+    Testing and Debugging
+    <div class="description">Write tests and debug code to ensure reliability.</div>
+  </div>
+  <div class="topic-card">
+    Python Advanced Topics (Generators, Decorators)
+    <div class="description">Deep dive into advanced Python features like generators and decorators.</div>
+  </div>
+  <div class="topic-card">
+    Working with APIs
+    <div class="description">Interact with external services using REST APIs in Python.</div>
+  </div>
+  <div class="topic-card">
+    Creating and Deploying Python Projects
+    <div class="description">Package your projects and deploy them for production use.</div>
+  </div>
+</div>
+
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20python%20course" style="display:inline-block; margin-top:1rem;">
+
+      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
