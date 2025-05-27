@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Microsoft Dynamics 365 Course Online – CRM Training | TeachHub</title>
-<meta name="description" content="Master Microsoft Dynamics 365 CRM online with TeachHub. Learn modules like Sales, Service, Workflows, and Integration.">
-<meta name="keywords" content="Dynamics 365 course Kurnool, CRM training, Microsoft online course, TeachHub Dynamics 365">
-
-  <title>Microsoft Dynamics 365 - TeachHub</title>
+  <title>Microsodt Dynamics 365 - TeachHub</title>
   <style>
     :root {
       --primary: #00b894;
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,60 +86,143 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Microsoft Dynamics 365 - TeachHub</h1>
+    <h1>Microsodt Dynamics 365 - TeachHub</h1>
   </header>
 
   <nav>
-     <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Microsoft Dynamics 365</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-        <li>Introduction to Microsoft Dynamics 365</li>
-        <li>Overview of Dynamics 365 Modules (Sales, Customer Service, Field Service, etc.)</li>
-        <li>Setting up Dynamics 365 Environment</li>
-        <li>Data Management in Dynamics 365</li>
-        <li>Customization and Configuration</li>
-        <li>Security and User Roles</li>
-        <li>Dynamics 365 Reporting and Analytics</li>
-        <li>Integration with Other Microsoft Products (Power BI, Office 365)</li>
-        <li>Dynamics 365 Automation and Workflows</li>
-        <li>Troubleshooting and Maintenance</li>
-        <li>Dynamics 365 Development (Customizing with PowerApps, Plugins, etc.)</li>
-        <li>Dynamics 365 Deployment and Upgrades</li>
-        <li>Dynamics 365 Best Practices and Performance Tuning</li>
-        <li>Integration with External Systems (APIs, Azure, etc.)</li>
-        <li>Final Project</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Microsodt Dynamics 365</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+   <div class="topics-grid">
+        <div class="topic-card">Introduction to Microsoft Dynamics 365<div class="description">Understand what Dynamics 365 is, including its benefits and use cases in businesses.</div></div>
+        <div class="topic-card">Overview of Dynamics 365 Modules<div class="description">Learn about modules like Sales, Customer Service, Field Service, Finance, and more.</div></div>
+        <div class="topic-card">Setting up Dynamics 365 Environment<div class="description">Steps to provision, configure, and access a Dynamics 365 environment.</div></div>
+        <div class="topic-card">Data Management in Dynamics 365<div class="description">Managing entities, records, imports/exports, and data integrity.</div></div>
+        <div class="topic-card">Customization and Configuration<div class="description">How to tailor forms, views, fields, and business rules to your needs.</div></div>
+        <div class="topic-card">Security and User Roles<div class="description">Define roles, privileges, and security models to manage access control.</div></div>
+        <div class="topic-card">Dynamics 365 Reporting and Analytics<div class="description">Creating dashboards, charts, and reports to analyze data effectively.</div></div>
+        <div class="topic-card">Integration with Microsoft Products<div class="description">Connecting Dynamics with Power BI, Teams, SharePoint, and Office 365.</div></div>
+        <div class="topic-card">Dynamics 365 Automation and Workflows<div class="description">Build automated flows using Power Automate and classic workflows.</div></div>
+        <div class="topic-card">Troubleshooting and Maintenance<div class="description">Monitor system health, resolve issues, and follow maintenance best practices.</div></div>
+        <div class="topic-card">Dynamics 365 Development<div class="description">Learn about JavaScript, custom plugins, and PowerApps development.</div></div>
+        <div class="topic-card">Dynamics 365 Deployment and Upgrades<div class="description">Best practices for deploying solutions and upgrading environments.</div></div>
+        <div class="topic-card">Best Practices and Performance Tuning<div class="description">Optimize your Dynamics instance for speed, reliability, and scale.</div></div>
+        <div class="topic-card">Integration with External Systems<div class="description">Use APIs, Azure Logic Apps, and custom connectors to connect to third-party apps.</div></div>
+        <div class="topic-card">Final Project<div class="description">Apply all topics in a mini-project that simulates a real Dynamics CRM scenario.</div></div>
+      </div>
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
+
+<a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
