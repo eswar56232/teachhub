@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Linux Administration Training in Kurnool – Online Course | TeachHub</title>
-<meta name="description" content="Become a system admin with TeachHub's Linux Administration course. Learn servers, scripting, and more online.">
-<meta name="keywords" content="Linux course Kurnool, system administration training, bash scripting, TeachHub Linux course">
-
-  <title>Linux Administration - TeachHub</title>
+  <title>Java Programming - TeachHub</title>
   <style>
     :root {
       --primary: #00b894;
@@ -61,14 +57,6 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .course-details ul {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding-left: 1.5rem;
-    }
-    .course-details ul li {
-      margin-bottom: 0.5rem;
-    }
     .course-details button {
       background-color: var(--primary);
       color: var(--white);
@@ -98,16 +86,71 @@
       from { opacity: 0; transform: translateY(-40px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7G5J1SP1V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-X7G5J1SP1V');
-</script>
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      background-color: #ffeaa7;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      font-weight: 500;
+      color: var(--dark);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .topic-card .description {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: #444;
+      background: #fffbea;
+      padding: 0.75rem;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+
+    .topic-card.active .description {
+      display: block;
+    }
+
+    .topics-grid .topic-card:nth-child(6n+1) { background-color: #fab1a0; }
+    .topics-grid .topic-card:nth-child(6n+2) { background-color: #81ecec; }
+    .topics-grid .topic-card:nth-child(6n+3) { background-color: #fdcb6e; }
+    .topics-grid .topic-card:nth-child(6n+4) { background-color: #74b9ff; }
+    .topics-grid .topic-card:nth-child(6n+5) { background-color: #a29bfe; }
+    .topics-grid .topic-card:nth-child(6n+6) { background-color: #55efc4; }
+
+    .course-intro {
+      background: linear-gradient(90deg, #fab1a0, #81ecec, #a29bfe);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      color: #2d3436;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+    }
+    .course-intro h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    .course-intro p {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -115,47 +158,132 @@
   </header>
 
   <nav>
-       <a href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="index.html#courses">Courses</a>
   </nav>
 
   <div class="container">
     <div class="course-details">
-      <h2>Linux Administration</h2>
-      <p>In this course, you will learn the following topics:</p>
-      <ul>
-        
-          <li>Introduction to Linux and Open Source</li>
-        <li>Installing Linux (Distributions, Dual Boot, Virtualization)</li>
-        <li>Linux Filesystem and Directory Structure</li>
-        <li>User and Group Management</li>
-        <li>File Permissions and Security</li>
-        <li>Process Management and Job Scheduling</li>
-        <li>Package Management and Software Installation</li>
-        <li>Networking in Linux (Configuring Network Interfaces, DNS, etc.)</li>
-        <li>Disk Management and File Systems</li>
-        <li>Backup and Recovery in Linux</li>
-        <li>System Monitoring and Performance Tuning</li>
-        <li>Shell Scripting and Automation</li>
-        <li>System Logging and Log Management</li>
-        <li>Security and Firewall Configuration</li>
-        <li>Remote Administration (SSH, SFTP)</li>
-        <li>Linux System Services and Daemons</li>
-        <li>Troubleshooting and Debugging</li>
-        <li>Linux System Updates and Patch Management</li>
-        <li>Final Project</li>
-      </ul>
-      <p><strong>Estimated Time to Complete:</strong> 8–10 weeks</p>
+      <div class="course-intro">
+        <h2>Linux Administration</h2>
+        <p>In this course, you will learn the following topics:</p>
+      </div>
+
+     <div class="topics-grid">
+  <div class="topic-card">
+    Introduction to Linux and Open Source
+    <div class="description">Understand the basics of Linux, its history, and the principles of open source software.</div>
+  </div>
+  <div class="topic-card">
+    Installing Linux (Distributions, Dual Boot, Virtualization)
+    <div class="description">Learn about different Linux distros, installation methods including dual boot and virtualization.</div>
+  </div>
+  <div class="topic-card">
+    Linux Filesystem and Directory Structure
+    <div class="description">Explore the Linux filesystem hierarchy and the purpose of key directories.</div>
+  </div>
+  <div class="topic-card">
+    User and Group Management
+    <div class="description">Manage users, groups, and permissions to control access on a Linux system.</div>
+  </div>
+  <div class="topic-card">
+    File Permissions and Security
+    <div class="description">Understand Linux file permissions, ownership, and basic security practices.</div>
+  </div>
+  <div class="topic-card">
+    Process Management and Job Scheduling
+    <div class="description">Monitor and control running processes and schedule jobs using cron and at.</div>
+  </div>
+  <div class="topic-card">
+    Package Management and Software Installation
+    <div class="description">Install and manage software packages using tools like apt, yum, or dnf.</div>
+  </div>
+  <div class="topic-card">
+    Networking in Linux (Configuring Network Interfaces, DNS, etc.)
+    <div class="description">Configure network settings, interfaces, and DNS on Linux systems.</div>
+  </div>
+  <div class="topic-card">
+    Disk Management and File Systems
+    <div class="description">Manage disks, partitions, and filesystems including mounting and formatting.</div>
+  </div>
+  <div class="topic-card">
+    Backup and Recovery in Linux
+    <div class="description">Learn backup strategies and recovery tools to protect data.</div>
+  </div>
+  <div class="topic-card">
+    System Monitoring and Performance Tuning
+    <div class="description">Use tools to monitor system resources and optimize performance.</div>
+  </div>
+  <div class="topic-card">
+    Shell Scripting and Automation
+    <div class="description">Write shell scripts to automate repetitive tasks and improve efficiency.</div>
+  </div>
+  <div class="topic-card">
+    System Logging and Log Management
+    <div class="description">Configure and analyze system logs for troubleshooting and auditing.</div>
+  </div>
+  <div class="topic-card">
+    Security and Firewall Configuration
+    <div class="description">Set up firewalls and implement security best practices on Linux.</div>
+  </div>
+  <div class="topic-card">
+    Remote Administration (SSH, SFTP)
+    <div class="description">Manage Linux systems remotely using SSH and secure file transfers with SFTP.</div>
+  </div>
+  <div class="topic-card">
+    Linux System Services and Daemons
+    <div class="description">Understand and manage background services and daemons on Linux.</div>
+  </div>
+  <div class="topic-card">
+    Troubleshooting and Debugging
+    <div class="description">Learn methods and tools for diagnosing and fixing Linux system issues.</div>
+  </div>
+  <div class="topic-card">
+    Linux System Updates and Patch Management
+    <div class="description">Keep Linux systems updated and secure with patch management techniques.</div>
+  </div>
+  <div class="topic-card">
+    Final Project
+    <div class="description">Apply all learned concepts to set up and manage a fully functional Linux system.</div>
+  </div>
+</div>
+
+      <p style="margin-top:2rem;"><strong>Estimated Time to Complete:</strong> 4–5 weeks</p>
       <p><strong>Prerequisites:</strong> Basic understanding of programming (helpful but not required)</p>
-      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20LinuxAdministration%20course" style="display:inline-block; margin-top:1rem;">
+
+      <a href="https://wa.me/919121677660?text=Hi%20I%20want%20to%20enroll%20in%20Microsoftdynamics365%20course" style="display:inline-block; margin-top:1rem;">
   <button>Enroll Now</button>
 </a>
-
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
   </footer>
+
+  <script>
+  const cards = document.querySelectorAll('.topic-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Prevent the click from propagating to the document
+      e.stopPropagation();
+
+      // Close all other cards
+      cards.forEach(c => {
+        if (c !== this) c.classList.remove('active');
+      });
+
+      // Toggle current card
+      this.classList.toggle('active');
+    });
+  });
+
+  // Close all cards if clicked outside
+  document.addEventListener('click', function () {
+    cards.forEach(c => c.classList.remove('active'));
+  });
+</script>
+
 </body>
 </html>
