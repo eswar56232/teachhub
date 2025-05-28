@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enquiry - TeachHub</title>
+  <style>
+    :root {
+      --primary: #00b894;
+      --dark: #2d3436;
+      --light: #f4f4f4;
+      --white: #fff;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    header img {
+      height: 60px;
+      border-radius: 50%;
+    }
+    nav {
+      background-color: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1.2rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.85rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+    button:hover {
+      background-color: #019474;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <img src="logo.png" alt="TeachHub Logo" />
+    <h1>TeachHub</h1>
+  </div>
+  <p>Your online learning platform</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="index.html#courses">Courses</a>
+</nav>
+
+<main>
+  <h2>Enquiry Form</h2>
+  <form id="enquiryForm" onsubmit="return sendToWhatsApp();">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" placeholder="10-digit number" pattern="\d{10}" required />
+
+    <label for="course">Course Interested In *</label>
+    <select id="course" name="course" required>
+      <option value="" disabled selected>Select a course</option>
+      <option value="Java Programming">Java Programming</option>
+      <option value="Python Programming">Python Programming</option>
+      <option value="Spring Boot">Spring Boot</option>
+      <option value="PostgreSQL">PostgreSQL</option>
+      <option value="SQL">SQL</option>
+      <option value="Node.js">Node.js</option>
+      <option value="Automation Testing with Selenium (Java)">Automation Testing with Selenium (Java)</option>
+      <option value="Microsoft Dynamics 365">Microsoft Dynamics 365</option>
+      <option value="Linux Administration">Linux Administration</option>
+      <option value="SAP Basis">SAP Basis</option>
+    </select>
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2025 TeachHub - Kurnool, Andhra Pradesh</p>
+</footer>
+
+<script>
+  function sendToWhatsApp() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const course = document.getElementById("course").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !phone || !course || !message) {
+      alert("Please fill in all mandatory fields.");
+      return false;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return false;
+    }
+
+    const text = 
+      `Hello, I am ${name}.\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n` +
+      `Course Interested In: ${course}\n` +
+      `Message: ${message}`;
+
+    const encodedMessage = encodeURIComponent(text);
+
+    const whatsappNumber = "919121677660"; // Replace with your WhatsApp number (with country code, no plus sign)
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+
+    // Clear form
+    document.getElementById("enquiryForm").reset();
+
+    alert("Form submitted successfully!");
+
+    // Redirect to main page after alert
+    window.location.href = "index.html"; // Adjust if your homepage is different
+
+    return false; // prevent default form submission
+  }
+</script>
+
+</body>
+</html>
